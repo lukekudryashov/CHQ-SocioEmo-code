@@ -22,6 +22,7 @@ library('readr')
 
 #import CSVs as data frames
 #CSVs created by running semtype_wordcloud_analysis.py on the two CSVs created with em_vs_non.py
+#change file path to match location
 em_df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/semtype_counts_em.csv") 
 nonem_df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/semtype_counts_nonem.csv")
 

@@ -19,6 +19,7 @@ library('dplyr')
 library('readr')
 
 #import CSV as data frame
+#change file path to match location
 df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/concept_counts.csv") 
 
 #rename "count" column to "count_focus"

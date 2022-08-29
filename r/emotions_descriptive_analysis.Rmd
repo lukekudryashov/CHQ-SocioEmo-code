@@ -18,6 +18,7 @@ library('dplyr')
 library('readr')
 
 #import and merge all CSV files into one data frame
+#change file path to match location
 df <- list.files(path='/Users/luke/Desktop/emotions_data', pattern = "*.csv", full.names = TRUE) %>%
   lapply(read_csv) %>%
   bind_rows
