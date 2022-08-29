@@ -1,0 +1,65 @@
+,semtype_code,semtype_num,semtype_name,group_code,group_name,count,count_emotion,count_sadness,count_joy,count_fear,count_anger,count_surprise,count_disgust,count_trust,count_anticipation,count_confusion,count_denial
+0,aapp,T116,"Amino Acid, Peptide, or Protein",CHEM,Chemicals & Drugs,46,108,21.0,1.0,36.0,3.0,3.0,8.0,,4.0,20.0,12.0
+1,acab,T020,Acquired Abnormality,DISO,Disorders,8,12,2.0,,5.0,1.0,,,,1.0,2.0,1.0
+2,acty,T052,Activity,ACTI,Activities & Behaviors,16,31,7.0,2.0,10.0,,2.0,2.0,1.0,2.0,4.0,1.0
+3,aggp,T100,Age Group,LIVB,Living Beings,17,49,19.0,3.0,15.0,1.0,2.0,,,3.0,,6.0
+4,anab,T190,Anatomical Abnormality,DISO,Disorders,13,10,1.0,,3.0,1.0,,,,2.0,1.0,2.0
+5,anst,T017,Anatomical Structure,ANAT,Anatomy,17,41,8.0,,20.0,8.0,,4.0,,,,1.0
+6,antb,T195,Antibiotic,CHEM,Chemicals & Drugs,17,24,10.0,,2.0,,,,,,1.0,11.0
+7,bact,T007,Bacterium,LIVB,Living Beings,4,5,3.0,,1.0,1.0,,,,,,
+8,bdsu,T031,Body Substance,ANAT,Anatomy,46,80,16.0,,33.0,4.0,3.0,7.0,,7.0,8.0,2.0
+9,bdsy,T022,Body System,ANAT,Anatomy,13,25,1.0,,9.0,,,,,3.0,9.0,3.0
+10,bhvr,T053,Behavior,ACTI,Activities & Behaviors,1,12,2.0,,2.0,1.0,1.0,,,3.0,2.0,1.0
+11,blor,T029,Body Location or Region,ANAT,Anatomy,105,174,37.0,4.0,75.0,1.0,,13.0,,18.0,14.0,12.0
+12,bmod,T091,Biomedical Occupation or Discipline,OCCU,Occupations,37,83,17.0,2.0,21.0,8.0,1.0,,,12.0,9.0,13.0
+13,bodm,T122,Biomedical or Dental Material,CHEM,Chemicals & Drugs,25,67,16.0,1.0,12.0,1.0,3.0,7.0,1.0,6.0,14.0,6.0
+14,bpoc,T023,"Body Part, Organ, or Organ Component",ANAT,Anatomy,230,300,35.0,2.0,123.0,9.0,8.0,14.0,2.0,41.0,44.0,22.0
+15,bsoj,T030,Body Space or Junction,ANAT,Anatomy,30,25,6.0,,9.0,1.0,1.0,,,1.0,3.0,4.0
+16,cgab,T019,Congenital Abnormality,DISO,Disorders,5,6,1.0,,3.0,,,,,1.0,1.0,
+17,clna,T201,Clinical Attribute,PHYS,Physiology,103,176,40.0,1.0,64.0,7.0,6.0,5.0,,16.0,23.0,14.0
+18,clnd,T200,Clinical Drug,CHEM,Chemicals & Drugs,1,2,,,1.0,,,,,,1.0,
+19,cnce,T077,Conceptual Entity,CONC,Concepts & Ideas,31,61,19.0,1.0,18.0,1.0,2.0,3.0,2.0,2.0,9.0,4.0
+20,diap,T060,Diagnostic Procedure,PROC,Procedures,24,48,5.0,,17.0,5.0,,,,7.0,11.0,3.0
+21,dora,T056,Daily or Recreational Activity,ACTI,Activities & Behaviors,5,7,1.0,1.0,1.0,1.0,,1.0,,,1.0,1.0
+22,dsyn,T047,Disease or Syndrome,DISO,Disorders,500,569,132.0,3.0,175.0,24.0,24.0,29.0,3.0,49.0,82.0,48.0
+23,famg,T099,Family Group,LIVB,Living Beings,15,64,22.0,2.0,23.0,7.0,,3.0,1.0,2.0,,4.0
+24,fndg,T033,Finding,DISO,Disorders,807,1208,260.0,13.0,374.0,68.0,31.0,54.0,3.0,121.0,189.0,95.0
+25,food,T168,Food,OBJC,Objects,30,40,10.0,,12.0,,,4.0,1.0,3.0,5.0,5.0
+26,ftcn,T169,Functional Concept,CONC,Concepts & Ideas,207,428,104.0,5.0,99.0,32.0,15.0,8.0,5.0,43.0,73.0,44.0
+27,hlca,T058,Health Care Activity,PROC,Procedures,53,83,26.0,,17.0,6.0,3.0,3.0,1.0,8.0,13.0,6.0
+28,hops,T131,Hazardous or Poisonous Substance,CHEM,Chemicals & Drugs,7,6,1.0,1.0,,1.0,,2.0,,,,1.0
+29,horm,T125,Hormone,CHEM,Chemicals & Drugs,30,45,8.0,,17.0,,,,,,13.0,7.0
+30,humn,T016,Human,LIVB,Living Beings,4,11,2.0,1.0,5.0,2.0,,1.0,,,,
+31,idcn,T078,Idea or Concept,CONC,Concepts & Ideas,82,256,69.0,5.0,66.0,27.0,9.0,7.0,2.0,22.0,29.0,20.0
+32,inbe,T055,Individual Behavior,ACTI,Activities & Behaviors,12,17,2.0,2.0,5.0,2.0,,,,,3.0,3.0
+33,inpo,T037,Injury or Poisoning,DISO,Disorders,31,45,12.0,1.0,14.0,2.0,2.0,2.0,,2.0,6.0,4.0
+34,inpr,T170,Intellectual Product,CONC,Concepts & Ideas,748,1224,279.0,16.0,404.0,74.0,30.0,35.0,5.0,111.0,156.0,114.0
+35,lbpr,T059,Laboratory Procedure,PROC,Procedures,46,69,15.0,,15.0,4.0,2.0,4.0,1.0,6.0,13.0,9.0
+36,medd,T074,Medical Device,DEVI,Devices,27,63,12.0,1.0,13.0,2.0,3.0,5.0,,7.0,9.0,11.0
+37,menp,T041,Mental Process,PHYS,Physiology,28,64,20.0,2.0,10.0,7.0,3.0,5.0,1.0,3.0,7.0,6.0
+38,mnob,T073,Manufactured Object,OBJC,Objects,40,86,18.0,2.0,19.0,12.0,3.0,4.0,,5.0,11.0,12.0
+39,mobd,T048,Mental or Behavioral Dysfunction,DISO,Disorders,337,329,120.0,2.0,70.0,24.0,5.0,8.0,2.0,32.0,45.0,21.0
+40,neop,T191,Neoplastic Process,DISO,Disorders,74,152,42.0,,57.0,4.0,,1.0,,14.0,18.0,16.0
+41,npop,T070,Natural Phenomenon or Process,PHEN,Phenomena,12,30,6.0,,10.0,2.0,,1.0,,4.0,4.0,3.0
+42,ocac,T057,Occupational Activity,ACTI,Activities & Behaviors,4,10,1.0,,3.0,,1.0,,,3.0,1.0,1.0
+43,orga,T032,Organism Attribute,PHYS,Physiology,20,43,14.0,1.0,6.0,3.0,6.0,3.0,,6.0,3.0,1.0
+44,orgf,T040,Organism Function,PHYS,Physiology,73,80,13.0,2.0,28.0,1.0,4.0,,1.0,17.0,9.0,5.0
+45,orgt,T092,Organization,ORGA,Organizations,1,6,2.0,,,1.0,,,,,2.0,1.0
+46,ortf,T042,Organ or Tissue Function,PHYS,Physiology,10,14,5.0,,2.0,2.0,1.0,2.0,,,2.0,
+47,patf,T046,Pathologic Function,DISO,Disorders,115,131,29.0,,42.0,6.0,9.0,5.0,3.0,7.0,27.0,3.0
+48,phpr,T067,Phenomenon or Process,PHEN,Phenomena,10,19,6.0,,4.0,1.0,2.0,1.0,,1.0,2.0,2.0
+49,phsf,T039,Physiologic Function,PHYS,Physiology,10,20,4.0,,8.0,,1.0,,,3.0,2.0,2.0
+50,phsu,T121,Pharmacologic Substance,CHEM,Chemicals & Drugs,165,251,43.0,5.0,61.0,12.0,10.0,15.0,6.0,14.0,50.0,35.0
+51,podg,T101,Patient or Disabled Group,LIVB,Living Beings,11,32,12.0,2.0,7.0,2.0,2.0,1.0,,1.0,1.0,4.0
+52,popg,T098,Population Group,LIVB,Living Beings,14,53,13.0,3.0,14.0,3.0,3.0,,1.0,2.0,8.0,6.0
+53,prog,T097,Professional or Occupational Group,LIVB,Living Beings,13,82,4.0,,10.0,6.0,2.0,1.0,1.0,5.0,12.0,41.0
+54,qlco,T080,Qualitative Concept,CONC,Concepts & Ideas,217,471,104.0,5.0,120.0,26.0,19.0,14.0,3.0,41.0,86.0,53.0
+55,sbst,T167,Substance,OBJC,Objects,8,14,1.0,,6.0,1.0,1.0,1.0,,,2.0,2.0
+56,socb,T054,Social Behavior,ACTI,Activities & Behaviors,1,13,4.0,2.0,2.0,,,1.0,,2.0,1.0,1.0
+57,sosy,T184,Sign or Symptom,DISO,Disorders,358,482,118.0,1.0,174.0,20.0,13.0,19.0,3.0,41.0,62.0,31.0
+58,spco,T082,Spatial Concept,CONC,Concepts & Ideas,56,180,42.0,2.0,50.0,8.0,4.0,8.0,1.0,23.0,29.0,13.0
+59,tisu,T024,Tissue,ANAT,Anatomy,8,13,1.0,,4.0,,2.0,,1.0,3.0,1.0,1.0
+60,tmco,T079,Temporal Concept,CONC,Concepts & Ideas,118,316,57.0,12.0,87.0,21.0,15.0,9.0,,22.0,61.0,32.0
+61,topp,T061,Therapeutic or Preventive Procedure,PROC,Procedures,136,213,38.0,3.0,44.0,10.0,14.0,7.0,2.0,33.0,42.0,20.0
+62,virs,T005,Virus,LIVB,Living Beings,15,14,5.0,,5.0,1.0,,,,1.0,1.0,1.0
+63,vita,T127,Vitamin,CHEM,Chemicals & Drugs,1,4,,,1.0,3.0,,,,,,
