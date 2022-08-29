@@ -1,0 +1,52 @@
+---
+title: "Emotions and Semtypes Analysis"
+output:
+  word_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+
+```{r load data}
+library('plyr')
+library('dplyr')
+library('readr')
+
+#import CSV as data frame
+df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/semtype_counts.csv") 
+
+#rename "count" column to "count_focus"
+colnames(df)[which(names(df) == "count")] <- "count_focus"
+
+#view data frame
+df
+
+```
+
+```{r comparison cloud - emotions}
+library(dplyr)
+library(tidyr)
+library(wordcloud)
+library(reshape2)
+library(tm)
+
+df[is.na(df)] <- 0
+
+emotions_df <- df[c("semtype_name","count_sadness","count_joy","count_fear","count_anger","count_surprise","count_disgust","count_trust","count_anticipation","count_confusion","count_denial")]
+
+emotions_df <- emotions_df %>% 
+  gather("Origin","Freq",c(2,3,4,5,6,7,8,9,10,11)) %>% 
+  acast(semtype_name~Origin,fill=0,value.var = "Freq")
+
+colnames(emotions_df) <- c("sadness","joy","fear","anger","surprise","disgust","trust","anticipation","confusion","denial")
+emotions_df
+
+png("emotions_comparison_wordcloud.png", width=12,height=12, units='in', res=200)
+comparison.cloud(emotions_df, max.words=30, random.order=FALSE,c(4,0.2), colors=c("#6929c4","#1192e8","#005d5d","#9f1853","#fa4d56","#570408","#198038","#002d9c","#ee538b","#b28600"),match.colors=TRUE)
+```

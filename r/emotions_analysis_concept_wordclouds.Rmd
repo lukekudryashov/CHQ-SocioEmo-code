@@ -1,0 +1,46 @@
+---
+title: "Emotions and Concepts Analysis"
+output:
+  word_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+
+```{r load data}
+library('plyr')
+library('dplyr')
+library('readr')
+
+#import CSV as data frame
+df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/concept_counts.csv") 
+
+#rename "count" column to "count_focus"
+colnames(df)[which(names(df) == "count")] <- "count_focus"
+
+#view data frame
+df
+
+```
+
+
+```{r focus wordcloud}
+library("wordcloud")
+library("RColorBrewer")
+
+# replace NA with 0
+df[is.na(df)] <- 0
+
+set.seed(1234)
+
+png("focus_wordcloud_concepts.png", width=12,height=12, units='in', res=200)
+wordcloud(words = df$concept_name, freq = df$count_focus, min.freq = 3,
+          max.words=50, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"),scale=c(4,0.2))
+```

@@ -1,0 +1,53 @@
+---
+title: "Emotions and Support Needs - Descriptive Analysis"
+output:
+  word_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r load data}
+library('plyr')
+library('dplyr')
+library('readr')
+
+#import and merge all CSV files into one data frame
+df <- list.files(path='/Users/luke/Desktop/emotions_data', pattern = "*.csv", full.names = TRUE) %>%
+  lapply(read_csv) %>%
+  bind_rows
+
+#view data frame
+df
+
+```
+```{r clean up}
+# remove the write-in entry for cleaner visualizations
+df <- df %>%
+  mutate(gender = replace(gender,gender=='(even though Lindsey is a female name, I am not sure about the gender)', NA))
+```
+
+
+```{r descriptive - age, sex}
+library(ggplot2)
+
+subset(df, !is.na(age))
+subset(df, !is.na(gender))
+
+g <- ggplot(data=subset(df, !is.na(age)), aes(age))
+g + geom_bar() + 
+  labs(title="Age Distribution Bar Chart",x="Asker's Age",y="Count") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+
+g <- ggplot(data=subset(df, !is.na(gender)), aes(gender))
+g + geom_bar() + 
+  labs(title="Sex Distribution Bar Chart",x="Asker's Sex",y="Count") +
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+```
+198/1500 questions have known age
+431/1500 questions have known sex

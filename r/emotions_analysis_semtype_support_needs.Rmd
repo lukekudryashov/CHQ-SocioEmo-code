@@ -1,0 +1,80 @@
+---
+title: "Support Needs and Semtypes Analysis"
+output:
+  word_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+**Distribution of named entities categories in question focus
+Across emotional and non-emotional consumer questions**
+
+```{r load data}
+library('plyr')
+library('dplyr')
+library('readr')
+
+#import CSVs as data frames
+#CSVs created by running semtype_wordcloud_analysis.py on the two CSVs created with em_vs_non.py
+em_df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/semtype_counts_em.csv") 
+nonem_df <- read_csv("/Users/luke/Desktop/metamap/public_mm_lite/semtype_counts_nonem.csv")
+
+#rename "count" column to "count_focus", add corresponding type
+colnames(em_df)[which(names(em_df) == "count")] <- "count_focus"
+colnames(nonem_df)[which(names(nonem_df) == "count")] <- "count_focus"
+
+#add support needs type column
+em_df <- em_df %>% mutate(support_needs='emotional')
+nonem_df <- nonem_df %>% mutate(support_needs='not emotional')
+
+#add percentage calculation
+total_em
+total_nonem
+em_df$percent_focus <- em_df$count_focus/total_em
+nonem_df$percent_focus <- nonem_df$count_focus/total_nonem
+
+#merge em and nonem dfs
+emotional_df <- rbind(em_df,nonem_df)
+
+
+# replace NA with 0
+emotional_df[is.na(emotional_df)] <- 0
+
+#get top 10 semtypes by count focus
+top10_em_df <- em_df %>% top_n(10, count_focus)
+top10_nonem_df <- nonem_df %>% top_n(10, count_focus)
+
+#subset dfs to include only top 10 semtypes from each category (11 total because of difference between em/nonem and inf/noninf sortings)
+top10_emotional_df <- filter(emotional_df, semtype_code == "bpoc" | semtype_code == "dsyn" | semtype_code == "fndg" | semtype_code == "ftcn" | semtype_code == "inpr" | semtype_code == "mobd" | semtype_code == "phsu" | semtype_code == "qlco" | semtype_code == "sosy" | semtype_code == "tmco" | semtype_code == "topp")
+
+#view data frames
+emotional_df
+
+total_em = ncol(em_df)
+total_nonem = ncol(nonem_df)
+
+
+top10_emotional_df
+
+```
+
+
+```{r question focus distribution}
+library("ggplot2")
+library("stringr")
+
+# side by side barplot emotional percentage
+top10_emotional_df %>% 
+  ggplot() + aes(y=reorder(semtype_name, count_focus), x=percent_focus,fill=support_needs)+
+  geom_col(position=position_dodge()) +
+    labs(title=str_wrap("Focus Semantic Type by Support Need (Emotional vs Non-Emotional)", 50),y="Semantic Type",x="Percent Semantic Type in Question Focus") + 
+  theme(axis.text.x = element_text(angle=90, vjust=0.6)) + 
+  guides(fill=guide_legend(title="Support Needs"))
+
+```
