@@ -49,5 +49,5 @@ g + geom_bar() +
   labs(title="Sex Distribution Bar Chart",x="Asker's Sex",y="Count") +
   theme(axis.text.x = element_text(angle=65, vjust=0.6))
 ```
-198/1500 questions have known age
-431/1500 questions have known sex
+196/1500 questions have known age
+415/1500 questions have known sex
