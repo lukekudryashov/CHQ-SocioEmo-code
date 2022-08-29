@@ -40,7 +40,7 @@ df[is.na(df)] <- 0
 
 set.seed(1234)
 
-png("focus_wordcloud_concepts.png", width=12,height=12, units='in', res=200)
+png("focus_wordcloud_concepts.png", width=13,height=13, units='in', res=200)
 wordcloud(words = df$concept_name, freq = df$count_focus, min.freq = 3,
           max.words=50, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(8, "Dark2"),scale=c(4,0.2))
