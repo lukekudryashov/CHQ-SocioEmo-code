@@ -146,15 +146,20 @@ def run_extraction_on_df(df):
 
 	#write the semtype count df to a csv file
 	semtype_df.to_csv('semtype_counts.csv')
+	#return semtype_df
 
 	print(f"extraction complete")
 
 
 #runs the code on specified data files
 df = join_dfs_from_files('Ann_AlL.csv')
+#df1 = join_dfs_from_files('em.csv')
+#df2 = join_dfs_from_files('nonem.csv')
 
 run_extraction_on_df(df)
 
+#run_extraction_on_df(df1).to_csv('semtype_counts_em.csv')
+#un_extraction_on_df(df2).to_csv('semtype_counts_nonem.csv')
 #print(df)
 
 
