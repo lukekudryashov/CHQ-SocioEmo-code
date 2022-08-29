@@ -35,8 +35,8 @@ em_df <- em_df %>% mutate(support_needs='emotional')
 nonem_df <- nonem_df %>% mutate(support_needs='not emotional')
 
 #add percentage calculation
-total_em
-total_nonem
+total_em = ncol(em_df)
+total_nonem = ncol(nonem_df)
 em_df$percent_focus <- em_df$count_focus/total_em
 nonem_df$percent_focus <- nonem_df$count_focus/total_nonem
 
@@ -56,9 +56,6 @@ top10_emotional_df <- filter(emotional_df, semtype_code == "bpoc" | semtype_code
 
 #view data frames
 emotional_df
-
-total_em = ncol(em_df)
-total_nonem = ncol(nonem_df)
 
 
 top10_emotional_df
